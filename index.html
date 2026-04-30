@@ -11,8 +11,14 @@ body {
     margin: 0;
 }
 
+/* smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* BANNER */
 .banner {
+    position: relative;
     margin: 10px;
     border: 2px solid #00f7ff;
     box-shadow: 0 0 20px #00f7ff;
@@ -20,6 +26,21 @@ body {
 
 .banner img {
     width: 100%;
+    display: block;
+}
+
+/* CLICKABLE NAV OVERLAY */
+.nav-overlay {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-overlay a {
+    width: 180px;
+    height: 70px;
     display: block;
 }
 
@@ -91,6 +112,15 @@ footer {
 <!-- BANNER -->
 <header class="banner">
     <img src="banner.png" alt="Banner">
+
+    <!-- invisible clickable tabs -->
+    <div class="nav-overlay">
+        <a href="#home"></a>
+        <a href="#blog"></a>
+        <a href="#projects"></a>
+        <a href="#education"></a>
+        <a href="#resume"></a>
+    </div>
 </header>
 
 <!-- MAIN -->
@@ -98,7 +128,7 @@ footer {
 
 <div>
 
-<div class="panel">
+<div id="home" class="panel">
 <h3>ABOUT ME</h3>
 <p>
 IT Service Desk Technician II focused on Linux, networking, and infrastructure.
@@ -118,7 +148,7 @@ IT Service Desk Technician II focused on Linux, networking, and infrastructure.
 
 <div>
 
-<div class="panel">
+<div id="blog" class="panel">
 <h2 style="color:yellow;">LATEST POSTS</h2>
 
 <div class="post">
@@ -131,6 +161,21 @@ IT Service Desk Technician II focused on Linux, networking, and infrastructure.
 <h3><a href="post2.html">Linux File Permissions</a></h3>
 </div>
 
+</div>
+
+<div id="projects" class="panel">
+<h3>PROJECTS</h3>
+<p>Projects will be added here.</p>
+</div>
+
+<div id="education" class="panel">
+<h3>EDUCATION</h3>
+<p>Bachelor’s Degree in Information Technology</p>
+</div>
+
+<div id="resume" class="panel">
+<h3>RESUME</h3>
+<p>Add your resume here.</p>
 </div>
 
 </div>
