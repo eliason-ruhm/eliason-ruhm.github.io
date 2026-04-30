@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog</title>
 
+<style>
+body {
+    background: black;
+    color: #00f7ff;
+    font-family: monospace;
+    margin: 0;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.nav-bar a {
+    text-align: center;
+    border: 2px solid #00f7ff;
+    padding: 20px 0;
+    color: #00f7ff;
+    text-decoration: none;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.panel {
+    border: 2px solid #00f7ff;
+    padding: 20px;
+    box-shadow: 0 0 10px #00f7ff;
+}
+</style>
+</head>
+
+<body>
+
+<header class="banner">
+    <img src="banner.png">
+</header>
+
+<div class="nav-bar">
+    <a href="index.html">HOME</a>
+    <a href="blog.html">BLOG</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="resume.html">RESUME</a>
+</div>
+
+<div class="container">
+<div class="panel">
+<h1>Blog</h1>
+<p>Start adding your posts here.</p>
+</div>
+</div>
+
+</body>
+</html>
