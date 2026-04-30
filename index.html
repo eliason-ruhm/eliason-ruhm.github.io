@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Eliason Ruhm | Linux Blog</title>
+<title>Eliason Ruhm</title>
 
 <style>
 body {
     background: black;
-    color: #00ffcc;
-    font-family: "Courier New", monospace;
+    color: #00f7ff;
+    font-family: monospace;
+    margin: 0;
 }
 
+/* HEADER */
 header {
-    text-align: center;
+    border: 2px solid #00f7ff;
+    margin: 10px;
     padding: 20px;
-    border-bottom: 2px solid #00ffcc;
-}
-
-h1 {
-    color: #ffff00;
-    font-size: 40px;
-}
-
-.nav {
     text-align: center;
-    padding: 10px;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+header h1 {
+    color: yellow;
+    font-size: 48px;
+    margin: 0;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px;
 }
 
 .nav a {
-    margin: 10px;
-    color: #00ffcc;
+    border: 2px solid #00f7ff;
+    padding: 10px 20px;
+    color: #00f7ff;
     text-decoration: none;
+    box-shadow: 0 0 5px #00f7ff;
 }
 
 .nav a:hover {
     color: yellow;
+    border-color: yellow;
 }
 
+/* GRID */
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-.box {
-    border: 2px solid #00ffcc;
-    padding: 15px;
-}
-
-.post {
-    margin-bottom: 20px;
+    grid-template-columns: 300px 1fr;
+    gap: 15px;
     padding: 10px;
-    border-left: 4px solid yellow;
+}
+
+/* PANELS */
+.panel {
+    border: 2px solid #00f7ff;
+    padding: 15px;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+.panel h3 {
+    color: yellow;
+}
+
+/* POSTS */
+.post {
+    border: 2px solid #00f7ff;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+.post h3 {
+    color: #00f7ff;
 }
 
 .post a {
@@ -62,6 +86,24 @@ h1 {
 .post a:hover {
     text-decoration: underline;
 }
+
+/* TERMINAL BOX */
+.terminal {
+    background: #111;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00f7ff;
+    color: #00ff00;
+}
+
+/* FOOTER */
+footer {
+    border-top: 2px solid #00f7ff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    color: #00f7ff;
+}
 </style>
 
 </head>
@@ -69,48 +111,88 @@ h1 {
 <body>
 
 <header>
-    <h1>Eliason Ruhm</h1>
-    <p>🐧 Linux | Networking | Infrastructure</p>
+    <div style="font-size:60px;">🐧 👻 👻 👻</div>
+    <h1>ELIASON RUHM</h1>
+    <p>IT SERVICE DESK TECHNICIAN II</p>
 </header>
 
 <div class="nav">
-    <a href="#">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#resume">Resume</a>
+    <a href="#">HOME</a>
+    <a href="#">BLOG</a>
+    <a href="#">PROJECTS</a>
+    <a href="#">EDUCATION</a>
+    <a href="#">RESUME</a>
 </div>
 
 <div class="container">
 
-<div class="box">
-    <h3>About</h3>
-    <p>IT Service Desk Technician II focused on transitioning into infrastructure and cloud roles.</p>
+<!-- LEFT SIDEBAR -->
+<div>
 
-    <h3>Certifications</h3>
-    <ul>
-        <li>CompTIA A+</li>
-        <li>CompTIA Network+</li>
-        <li>CompTIA Security+</li>
-    </ul>
+<div class="panel">
+<h3>ABOUT ME</h3>
+<p>
+IT Service Desk Technician II focused on Linux, networking, and infrastructure.
+Documenting real labs and troubleshooting work.
+</p>
 </div>
 
-<div class="box">
+<div class="panel">
+<h3>CERTIFICATIONS</h3>
+<ul>
+<li>CompTIA A+</li>
+<li>CompTIA Network+</li>
+<li>CompTIA Security+</li>
+</ul>
+</div>
 
-<h2>Latest Blog Posts</h2>
+<div class="panel">
+<h3>SKILLS</h3>
+<ul>
+<li>Linux</li>
+<li>Networking</li>
+<li>Troubleshooting</li>
+</ul>
+</div>
+
+<div class="panel">
+<h3>CONNECT</h3>
+<p>LinkedIn</p>
+<p>Email</p>
+<p>GitHub</p>
+</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div>
+
+<div class="panel">
+<h2 style="color:yellow;">LATEST POSTS</h2>
 
 <div class="post">
-    <h3><a href="post1.html">Diagnosing a Broadcast Storm</a></h3>
-    <p>How I traced a loop issue that caused network outages.</p>
+<div class="terminal">$ diagnosing_network_issue</div>
+<h3><a href="post1.html">Diagnosing a Broadcast Storm</a></h3>
+<p>Real-world troubleshooting scenario.</p>
+<p style="color:yellow;">READ MORE →</p>
 </div>
 
 <div class="post">
-    <h3><a href="post2.html">Linux File Permissions</a></h3>
-    <p>Understanding chmod, users, and groups.</p>
+<div class="terminal">$ linux_permissions_lab</div>
+<h3><a href="post2.html">Linux File Permissions</a></h3>
+<p>Lab in progress.</p>
+<p style="color:yellow;">READ MORE →</p>
 </div>
 
 </div>
 
 </div>
+
+</div>
+
+<footer>
+© 2026 Eliason Ruhm | Built with GitHub Pages
+</footer>
 
 </body>
 </html>
