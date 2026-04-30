@@ -1,10 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to My Website</title>
+<title>Eliason Ruhm | Linux Blog</title>
+
+<style>
+body {
+    background: black;
+    color: #00ffcc;
+    font-family: "Courier New", monospace;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #00ffcc;
+}
+
+h1 {
+    color: #ffff00;
+    font-size: 40px;
+}
+
+.nav {
+    text-align: center;
+    padding: 10px;
+}
+
+.nav a {
+    margin: 10px;
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: yellow;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    border: 2px solid #00ffcc;
+    padding: 15px;
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid yellow;
+}
+
+.post a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+</style>
+
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my website hosted on GitHub Pages!</p>
+
+<header>
+    <h1>Eliason Ruhm</h1>
+    <p>🐧 Linux | Networking | Infrastructure</p>
+</header>
+
+<div class="nav">
+    <a href="#">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#resume">Resume</a>
+</div>
+
+<div class="container">
+
+<div class="box">
+    <h3>About</h3>
+    <p>IT Service Desk Technician II focused on transitioning into infrastructure and cloud roles.</p>
+
+    <h3>Certifications</h3>
+    <ul>
+        <li>CompTIA A+</li>
+        <li>CompTIA Network+</li>
+        <li>CompTIA Security+</li>
+    </ul>
+</div>
+
+<div class="box">
+
+<h2>Latest Blog Posts</h2>
+
+<div class="post">
+    <h3><a href="post1.html">Diagnosing a Broadcast Storm</a></h3>
+    <p>How I traced a loop issue that caused network outages.</p>
+</div>
+
+<div class="post">
+    <h3><a href="post2.html">Linux File Permissions</a></h3>
+    <p>Understanding chmod, users, and groups.</p>
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
