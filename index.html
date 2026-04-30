@@ -11,12 +11,17 @@ body {
     margin: 0;
 }
 
+/* smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* BANNER */
 .banner {
+    position: relative;
     margin: 10px;
     border: 2px solid #00f7ff;
     box-shadow: 0 0 20px #00f7ff;
-    overflow: hidden;
 }
 
 .banner img {
@@ -24,25 +29,19 @@ body {
     display: block;
 }
 
-/* NAV */
-.nav {
+/* clickable nav overlay */
+.nav-overlay {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 10px;
+    justify-content: space-around;
 }
 
-.nav a {
-    border: 2px solid #00f7ff;
-    padding: 10px 20px;
-    color: #00f7ff;
-    text-decoration: none;
-    box-shadow: 0 0 5px #00f7ff;
-}
-
-.nav a:hover {
-    color: yellow;
-    border-color: yellow;
+.nav-overlay a {
+    width: 150px;
+    height: 60px;
+    display: block;
 }
 
 /* GRID */
@@ -113,16 +112,15 @@ footer {
 <!-- BANNER -->
 <header class="banner">
     <img src="banner.png" alt="Banner">
-</header>
 
-<!-- NAV -->
-<div class="nav">
-    <a href="#">HOME</a>
-    <a href="#">BLOG</a>
-    <a href="#">PROJECTS</a>
-    <a href="#">EDUCATION</a>
-    <a href="#">RESUME</a>
-</div>
+    <div class="nav-overlay">
+        <a href="#home"></a>
+        <a href="#blog"></a>
+        <a href="#projects"></a>
+        <a href="#education"></a>
+        <a href="#resume"></a>
+    </div>
+</header>
 
 <!-- MAIN -->
 <div class="container">
@@ -130,7 +128,7 @@ footer {
 <!-- LEFT SIDEBAR -->
 <div>
 
-<div class="panel">
+<div id="home" class="panel">
 <h3>ABOUT ME</h3>
 <p>
 IT Service Desk Technician II focused on Linux, networking, and infrastructure.
@@ -168,7 +166,7 @@ Documenting real labs and troubleshooting work.
 <!-- RIGHT CONTENT -->
 <div>
 
-<div class="panel">
+<div id="blog" class="panel">
 <h2 style="color:yellow;">LATEST POSTS</h2>
 
 <div class="post">
@@ -185,6 +183,21 @@ Documenting real labs and troubleshooting work.
 <p style="color:yellow;">READ MORE →</p>
 </div>
 
+</div>
+
+<div id="projects" class="panel">
+<h3>PROJECTS</h3>
+<p>Projects will be added as they are completed.</p>
+</div>
+
+<div id="education" class="panel">
+<h3>EDUCATION</h3>
+<p>Bachelor’s Degree in Information Technology</p>
+</div>
+
+<div id="resume" class="panel">
+<h3>RESUME</h3>
+<p>Resume coming soon.</p>
 </div>
 
 </div>
