@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diagnosing a Broadcast Storm</title>
+</head>
+
+<body style="background:black; color:#00ffcc; font-family:monospace; padding:20px;">
+
+<h1>Diagnosing a Broadcast Storm in a Retail Network</h1>
+
+<p><b>Date:</b> 2026</p>
+
+<h2>Overview</h2>
+<p>
+While working as an IT Service Desk Technician II, I encountered a recurring network outage affecting a retail location. 
+The issue caused intermittent connectivity loss across devices and required deeper investigation beyond standard troubleshooting.
+</p>
+
+<h2>The Problem</h2>
+<p>
+The store experienced repeated network drops. Initial checks showed that the router and switch connectivity were unstable, 
+suggesting excessive traffic or a possible loop in the network.
+</p>
+
+<h2>Investigation</h2>
+<p>
+Using network monitoring tools and switch-level inspection, I reviewed connected devices and port activity. 
+I identified abnormal behavior where two IP phones were associated with the same IP address.
+</p>
+
+<p>
+This indicated a loop in the network, which was generating a broadcast storm—flooding the network with traffic and overwhelming infrastructure components.
+</p>
+
+<h2>Resolution</h2>
+<p>
+I isolated the affected switch port and confirmed the duplicate device connection. 
+After removing the loop and correcting the device configuration, network stability was restored.
+</p>
+
+<h2>Key Takeaways</h2>
+<ul>
+<li>Broadcast storms can be caused by simple misconfigurations like device loops</li>
+<li>Switch-level visibility is critical for diagnosing network issues</li>
+<li>Systematic troubleshooting helps isolate complex problems quickly</li>
+</ul>
+
+<br>
+<a href="index.html">← Back to Home</a>
+
+</body>
+</html>
