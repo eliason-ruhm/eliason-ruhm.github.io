@@ -13,7 +13,6 @@ body {
 
 /* BANNER */
 .banner {
-    position: relative;
     margin: 10px;
     border: 2px solid #00f7ff;
     box-shadow: 0 0 20px #00f7ff;
@@ -22,76 +21,6 @@ body {
 .banner img {
     width: 100%;
     display: block;
-}
-
-/* CENTERED OVERLAY */
-.banner-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-}
-
-/* NAME + PACMAN ROW */
-.title-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-/* NAME */
-.title-row h1 {
-    margin: 0;
-    color: #ffe800;
-    font-size: 48px;
-    letter-spacing: 4px;
-    text-shadow: 0 0 10px #ffe800, 0 0 20px #ffe800;
-}
-
-/* SUBTITLE */
-.subtitle {
-    margin-top: 10px;
-    color: #00f7ff;
-    letter-spacing: 2px;
-}
-
-/* PACMAN */
-.pacman-line {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.pacman {
-    width: 24px;
-    height: 24px;
-    background: #ffe800;
-    border-radius: 50%;
-    position: relative;
-}
-
-.pacman::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-left: 12px solid black;
-}
-
-/* DOTS */
-.dots span {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: #ffe800;
-    border-radius: 50%;
-    margin-right: 6px;
 }
 
 /* GRID */
@@ -162,21 +91,6 @@ footer {
 <!-- BANNER -->
 <header class="banner">
     <img src="banner.png" alt="Banner">
-
-    <div class="banner-overlay">
-        <div class="title-row">
-            <h1>ELIASON RUHM</h1>
-
-            <div class="pacman-line">
-                <div class="pacman"></div>
-                <div class="dots">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-
-        <p class="subtitle">IT SERVICE DESK TECHNICIAN II</p>
-    </div>
 </header>
 
 <!-- MAIN -->
