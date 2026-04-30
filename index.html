@@ -11,11 +11,6 @@ body {
     margin: 0;
 }
 
-/* smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
 /* BANNER */
 .banner {
     position: relative;
@@ -29,19 +24,74 @@ html {
     display: block;
 }
 
-/* clickable nav overlay */
-.nav-overlay {
+/* CENTERED OVERLAY */
+.banner-overlay {
     position: absolute;
-    bottom: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
-.nav-overlay a {
-    width: 150px;
-    height: 60px;
-    display: block;
+/* NAME + PACMAN ROW */
+.title-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* NAME */
+.title-row h1 {
+    margin: 0;
+    color: #ffe800;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #ffe800, 0 0 20px #ffe800;
+}
+
+/* SUBTITLE */
+.subtitle {
+    margin-top: 10px;
+    color: #00f7ff;
+    letter-spacing: 2px;
+}
+
+/* PACMAN */
+.pacman-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pacman {
+    width: 24px;
+    height: 24px;
+    background: #ffe800;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pacman::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid black;
+}
+
+/* DOTS */
+.dots span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #ffe800;
+    border-radius: 50%;
+    margin-right: 6px;
 }
 
 /* GRID */
@@ -113,26 +163,31 @@ footer {
 <header class="banner">
     <img src="banner.png" alt="Banner">
 
-    <div class="nav-overlay">
-        <a href="#home"></a>
-        <a href="#blog"></a>
-        <a href="#projects"></a>
-        <a href="#education"></a>
-        <a href="#resume"></a>
+    <div class="banner-overlay">
+        <div class="title-row">
+            <h1>ELIASON RUHM</h1>
+
+            <div class="pacman-line">
+                <div class="pacman"></div>
+                <div class="dots">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <p class="subtitle">IT SERVICE DESK TECHNICIAN II</p>
     </div>
 </header>
 
 <!-- MAIN -->
 <div class="container">
 
-<!-- LEFT SIDEBAR -->
 <div>
 
-<div id="home" class="panel">
+<div class="panel">
 <h3>ABOUT ME</h3>
 <p>
 IT Service Desk Technician II focused on Linux, networking, and infrastructure.
-Documenting real labs and troubleshooting work.
 </p>
 </div>
 
@@ -145,66 +200,29 @@ Documenting real labs and troubleshooting work.
 </ul>
 </div>
 
-<div class="panel">
-<h3>SKILLS</h3>
-<ul>
-<li>Linux</li>
-<li>Networking</li>
-<li>Troubleshooting</li>
-</ul>
 </div>
 
-<div class="panel">
-<h3>CONNECT</h3>
-<p>LinkedIn</p>
-<p>Email</p>
-<p>GitHub</p>
-</div>
-
-</div>
-
-<!-- RIGHT CONTENT -->
 <div>
 
-<div id="blog" class="panel">
+<div class="panel">
 <h2 style="color:yellow;">LATEST POSTS</h2>
 
 <div class="post">
 <div class="terminal">$ diagnosing_network_issue</div>
 <h3><a href="post1.html">Diagnosing a Broadcast Storm</a></h3>
-<p>Real-world troubleshooting scenario.</p>
-<p style="color:yellow;">READ MORE →</p>
 </div>
 
 <div class="post">
 <div class="terminal">$ linux_permissions_lab</div>
 <h3><a href="post2.html">Linux File Permissions</a></h3>
-<p>Lab in progress.</p>
-<p style="color:yellow;">READ MORE →</p>
-</div>
-
-</div>
-
-<div id="projects" class="panel">
-<h3>PROJECTS</h3>
-<p>Projects will be added as they are completed.</p>
-</div>
-
-<div id="education" class="panel">
-<h3>EDUCATION</h3>
-<p>Bachelor’s Degree in Information Technology</p>
-</div>
-
-<div id="resume" class="panel">
-<h3>RESUME</h3>
-<p>Resume coming soon.</p>
 </div>
 
 </div>
 
 </div>
 
-<!-- FOOTER -->
+</div>
+
 <footer>
 © 2026 Eliason Ruhm | Built with GitHub Pages
 </footer>
